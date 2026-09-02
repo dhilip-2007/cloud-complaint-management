@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - Notifications"
+    >
+
+    <title>
+        Notifications | CloudComplain
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Stay updated about your complaints.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- USER -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div class="user-avatar">
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        NOTIFICATION CENTER
+                    </span>
+
+                    <h1>
+                        Your Notifications
+                    </h1>
+
+                    <p>
+                        View updates and important information
+                        about your submitted complaints.
+                    </p>
+
+                </div>
+
+
+                <div class="tracking-header-icon">
+                    🔔
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION ACTIONS
+            ================================================== -->
+
+            <section class="notification-toolbar">
+
+
+                <div class="notification-summary">
+
+                    <div class="notification-summary-icon">
+                        🔔
+                    </div>
+
+                    <div>
+
+                        <strong id="unreadNotificationCount">
+                            0 unread notifications
+                        </strong>
+
+                        <p>
+                            Keep track of the latest updates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-actions">
+
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        onclick="markAllNotificationsRead()"
+                    >
+
+                        ✓
+
+                        Mark All as Read
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="danger-outline-button"
+                        onclick="clearNotifications()"
+                    >
+
+                        🗑️
+
+                        Clear All
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION LIST
+            ================================================== -->
+
+            <section class="list-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            RECENT ACTIVITY
+                        </span>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="notificationList"
+                    class="notification-list"
+                >
+
+                    <!-- Notifications are loaded by script.js -->
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 EMPTY NOTIFICATION MESSAGE
+            ================================================== -->
+
+            <section
+                id="notificationEmptyState"
+                class="empty-state"
+                style="display: none;"
+            >
+
+                <div class="empty-icon">
+                    🔔
+                </div>
+
+                <h3>
+                    No Notifications
+                </h3>
+
+                <p>
+                    You don't have any notifications yet.
+                    Updates about your complaints will appear here.
+                </p>
+
+                <a
+                    href="submit.html"
+                    class="primary-button"
+                >
+
+                    ➕
+
+                    Submit a Complaint
+
+                </a>
+
+            </section>
+
+
+            <!-- =================================================
+                 INFORMATION CARDS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            HOW IT WORKS
+                        </span>
+
+                        <h2>
+                            Stay Updated
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-info-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <div class="notification-info-card">
+
+                        <div class="notification-info-icon">
+                            📝
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Complaint Submitted
+                            </h3>
+
+                            <p>
+                                You will receive a notification
+                                when a new complaint is successfully
+                                submitted.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 2 -->
+
+                    <div class="notification-info-card">
+
+                        <div class="notification-info-icon">
+                            🔄
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Status Updated
+                            </h3>
+
+                            <p>
+                                Notifications keep you informed when
+                                your complaint moves to a new status.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 3 -->
+
+                    <div class="notification-info-card">
+
+                        <div class="notification-info-icon">
+                            ✅
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Complaint Resolved
+                            </h3>
+
+                            <p>
+                                A notification is shown when your
+                                complaint has been resolved.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         NOTIFICATION PAGE SCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadNotifications();
+
+                updateNotificationPageCount();
+
+                if (
+                    typeof updateNotificationCount ===
+                    "function"
+                ) {
+
+                    updateNotificationCount();
+
+                }
+
+                if (
+                    typeof updateUserDisplay ===
+                    "function"
+                ) {
+
+                    updateUserDisplay();
+
+                }
+
+            }
+        );
+
+
+        /*
+         * Load notifications from localStorage
+         */
+
+        function loadNotifications() {
+
+            const notificationList =
+                document.getElementById(
+                    "notificationList"
+                );
+
+            const emptyState =
+                document.getElementById(
+                    "notificationEmptyState"
+                );
+
+
+            if (!notificationList) {
+
+                return;
+
+            }
+
+
+            let notifications = [];
+
+
+            try {
+
+                if (
+                    typeof getNotifications ===
+                    "function"
+                ) {
+
+                    notifications =
+                        getNotifications();
+
+                } else {
+
+                    notifications =
+                        JSON.parse(
+                            localStorage.getItem(
+                                "cloudcomplain_notifications"
+                            )
+                        ) || [];
+
+                }
+
+            } catch (error) {
+
+                notifications = [];
+
+            }
+
+
+            notificationList.innerHTML = "";
+
+
+            if (
+                !notifications ||
+                notifications.length === 0
+            ) {
+
+                if (emptyState) {
+
+                    emptyState.style.display =
+                        "flex";
+
+                }
+
+                return;
+
+            }
+
+
+            if (emptyState) {
+
+                emptyState.style.display =
+                    "none";
+
+            }
+
+
+            notifications.forEach(
+                function (notification) {
+
+                    const item =
+                        createNotificationElement(
+                            notification
+                        );
+
+                    notificationList.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+        }
+
+
+        /*
+         * Create one notification card
+         */
+
+        function createNotificationElement(
+            notification
+        ) {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "notification-card";
+
+
+            if (!notification.read) {
+
+                item.classList.add(
+                    "unread"
+                );
+
+            }
+
+
+            const icon =
+                getNotificationIcon(
+                    notification.type
+                );
+
+
+            const date =
+                formatNotificationDate(
+                    notification.createdAt ||
+                    notification.date
+                );
+
+
+            const safeTitle =
+                escapeNotificationHTML(
+                    notification.title ||
+                    "Notification"
+                );
+
+
+            const safeMessage =
+                escapeNotificationHTML(
+                    notification.message ||
+                    ""
+                );
+
+
+            const complaintId =
+                notification.complaintId
+                    ? escapeNotificationHTML(
+                        notification.complaintId
+                    )
+                    : "";
+
+
+            item.innerHTML = `
+
+                <div class="notification-icon">
+
+                    ${icon}
+
+                </div>
+
+
+                <div class="notification-content">
+
+                    <div class="notification-content-top">
+
+                        <h3>
+                            ${safeTitle}
+                        </h3>
+
+                        ${
+                            !notification.read
+                            ? `
+                                <span class="unread-dot">
+                                </span>
+                            `
+                            : ""
+                        }
+
+                    </div>
+
+
+                    <p>
+                        ${safeMessage}
+                    </p>
+
+
+                    ${
+                        complaintId
+                        ? `
+                            <span class="notification-complaint-id">
+                                Complaint ID:
+                                <strong>
+                                    ${complaintId}
+                                </strong>
+                            </span>
+                        `
+                        : ""
+                    }
+
+
+                    <small>
+                        ${date}
+                    </small>
+
+                </div>
+
+
+                <div class="notification-card-actions">
+
+                    ${
+                        !notification.read
+                        ? `
+                            <button
+                                type="button"
+                                class="notification-read-button"
+                                onclick="readNotification('${notification.id}')"
+                            >
+                                Mark as read
+                            </button>
+                        `
+                        : `
+                            <span class="read-label">
+                                ✓ Read
+                            </span>
+                        `
+                    }
+
+                </div>
+
+            `;
+
+
+            return item;
+
+        }
+
+
+        /*
+         * Notification icons
+         */
+
+        function getNotificationIcon(type) {
+
+            switch (type) {
+
+                case "success":
+                    return "✅";
+
+                case "resolved":
+                    return "🎉";
+
+                case "status":
+                    return "🔄";
+
+                case "warning":
+                    return "⚠️";
+
+                case "error":
+                    return "❌";
+
+                case "info":
+                    return "ℹ️";
+
+                default:
+                    return "🔔";
+
+            }
+
+        }
+
+
+        /*
+         * Mark one notification as read
+         */
+
+        function readNotification(id) {
+
+            if (
+                typeof markNotificationRead ===
+                "function"
+            ) {
+
+                markNotificationRead(id);
+
+            } else {
+
+                let notifications =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "cloudcomplain_notifications"
+                        )
+                    ) || [];
+
+
+                notifications =
+                    notifications.map(
+                        function (notification) {
+
+                            if (
+                                String(
+                                    notification.id
+                                ) === String(id)
+                            ) {
+
+                                return {
+                                    ...notification,
+                                    read: true
+                                };
+
+                            }
+
+                            return notification;
+
+                        }
+                    );
+
+
+                localStorage.setItem(
+                    "cloudcomplain_notifications",
+                    JSON.stringify(
+                        notifications
+                    )
+                );
+
+            }
+
+
+            loadNotifications();
+
+            updateNotificationPageCount();
+
+
+            if (
+                typeof updateNotificationCount ===
+                "function"
+            ) {
+
+                updateNotificationCount();
+
+            }
+
+
+            if (
+                typeof showToast ===
+                "function"
+            ) {
+
+                showToast(
+                    "Notification marked as read.",
+                    "success"
+                );
+
+            }
+
+        }
+
+
+        /*
+         * Update unread notification text
+         */
+
+        function updateNotificationPageCount() {
+
+            let notifications = [];
+
+
+            try {
+
+                if (
+                    typeof getNotifications ===
+                    "function"
+                ) {
+
+                    notifications =
+                        getNotifications();
+
+                } else {
+
+                    notifications =
+                        JSON.parse(
+                            localStorage.getItem(
+                                "cloudcomplain_notifications"
+                            )
+                        ) || [];
+
+                }
+
+            } catch (error) {
+
+                notifications = [];
+
+            }
+
+
+            const unreadCount =
+                notifications.filter(
+                    function (notification) {
+
+                        return !notification.read;
+
+                    }
+                ).length;
+
+
+            const element =
+                document.getElementById(
+                    "unreadNotificationCount"
+                );
+
+
+            if (element) {
+
+                element.textContent =
+                    unreadCount +
+                    (
+                        unreadCount === 1
+                            ? " unread notification"
+                            : " unread notifications"
+                    );
+
+            }
+
+        }
+
+
+        /*
+         * Format notification date
+         */
+
+        function formatNotificationDate(
+            dateValue
+        ) {
+
+            if (!dateValue) {
+
+                return "Recently";
+
+            }
+
+
+            const date =
+                new Date(dateValue);
+
+
+            if (
+                Number.isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                return "Recently";
+
+            }
+
+
+            return date.toLocaleString(
+                "en-IN",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit"
+                }
+            );
+
+        }
+
+
+        /*
+         * Prevent HTML injection
+         */
+
+        function escapeNotificationHTML(
+            value
+        ) {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.textContent =
+                value == null
+                    ? ""
+                    : String(value);
+
+
+            return div.innerHTML;
+
+        }
+
+
+        /*
+         * Refresh page when another tab
+         * changes localStorage.
+         */
+
+        window.addEventListener(
+            "storage",
+            function (event) {
+
+                if (
+                    event.key ===
+                    "cloudcomplain_notifications"
+                ) {
+
+                    loadNotifications();
+
+                    updateNotificationPageCount();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - User Profile"
+    >
+
+    <title>
+        Profile | CloudComplain
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                        <p>
+                            Manage your CloudComplain profile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- USER -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div
+                            class="user-avatar"
+                            id="topbarAvatar"
+                        >
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        ACCOUNT SETTINGS
+                    </span>
+
+                    <h1>
+                        Profile
+                    </h1>
+
+                    <p>
+                        Update your personal information and
+                        account details.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-header-icon">
+                    👤
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE LAYOUT
+            ================================================== -->
+
+            <section class="profile-layout">
+
+
+                <!-- =============================================
+                     PROFILE CARD
+                ============================================== -->
+
+                <div class="profile-main-card">
+
+
+                    <!-- PROFILE COVER -->
+
+                    <div class="profile-cover">
+
+                        <div
+                            class="large-profile-avatar"
+                            id="profileAvatar"
+                        >
+                            D
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROFILE INTRO -->
+
+                    <div class="profile-intro">
+
+                        <h2 id="profileDisplayName">
+                            Dhilip Kumar
+                        </h2>
+
+                        <p>
+                            Student
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROFILE FORM -->
+
+                    <form
+                        id="profileForm"
+                        class="profile-form"
+                    >
+
+
+                        <div class="form-card-header">
+
+                            <div class="form-header-icon">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <span class="section-label">
+                                    PERSONAL INFORMATION
+                                </span>
+
+                                <h2>
+                                    Account Details
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="profileName">
+                                Full Name
+                                <span class="required">
+                                    *
+                                </span>
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="profileName"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="profileEmail">
+                                Email Address
+                                <span class="required">
+                                    *
+                                </span>
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    ✉️
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="profileEmail"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="profilePhone">
+                                Phone Number
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    📱
+                                </span>
+
+                                <input
+                                    type="tel"
+                                    id="profilePhone"
+                                    name="phone"
+                                    placeholder="Enter your phone number"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DEPARTMENT -->
+
+                        <div class="form-group">
+
+                            <label for="profileDepartment">
+                                Department
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    🎓
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="profileDepartment"
+                                    name="department"
+                                    placeholder="Enter your department"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ROLE -->
+
+                        <div class="form-group">
+
+                            <label for="profileRole">
+                                Role
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    🏷️
+                                </span>
+
+                                <select
+                                    id="profileRole"
+                                    name="role"
+                                >
+
+                                    <option value="Student">
+                                        Student
+                                    </option>
+
+                                    <option value="Faculty">
+                                        Faculty
+                                    </option>
+
+                                    <option value="Staff">
+                                        Staff
+                                    </option>
+
+                                    <option value="Administrator">
+                                        Administrator
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                id="resetProfileButton"
+                            >
+
+                                ↩️
+
+                                Reset
+
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+
+                                💾
+
+                                Save Changes
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+                <!-- =============================================
+                     PROFILE SIDE INFORMATION
+                ============================================== -->
+
+                <div class="profile-side-column">
+
+
+                    <!-- ACCOUNT STATUS -->
+
+                    <div class="side-info-card profile-status-card">
+
+
+                        <div class="side-info-icon">
+                            🛡️
+                        </div>
+
+
+                        <span class="section-label">
+                            ACCOUNT STATUS
+                        </span>
+
+
+                        <h3>
+                            Profile Active
+                        </h3>
+
+
+                        <p>
+                            Your CloudComplain profile is active
+                            and ready to use.
+                        </p>
+
+
+                        <div class="account-status">
+
+                            <span class="status-dot">
+                            </span>
+
+                            Active
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PROFILE FEATURES -->
+
+                    <div class="side-info-card">
+
+
+                        <div class="side-info-icon">
+                            ☁️
+                        </div>
+
+
+                        <span class="section-label">
+                            CLOUDCOMPLAIN
+                        </span>
+
+
+                        <h3>
+                            Your Account
+                        </h3>
+
+
+                        <div class="profile-feature-list">
+
+
+                            <div class="profile-feature">
+
+                                <span>
+                                    📋
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Submit Complaints
+                                    </strong>
+
+                                    <p>
+                                        Report campus issues easily.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-feature">
+
+                                <span>
+                                    🔍
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Track Progress
+                                    </strong>
+
+                                    <p>
+                                        Follow your complaint status.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-feature">
+
+                                <span>
+                                    🔔
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Get Notifications
+                                    </strong>
+
+                                    <p>
+                                        Receive important updates.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PRIVACY -->
+
+                    <div class="side-info-card">
+
+
+                        <div class="side-info-icon">
+                            🔒
+                        </div>
+
+
+                        <span class="section-label">
+                            PRIVACY
+                        </span>
+
+
+                        <h3>
+                            Your Information
+                        </h3>
+
+
+                        <p>
+                            Your profile information is stored
+                            locally in your browser for this
+                            frontend demonstration.
+                        </p>
+
+
+                        <div class="privacy-note">
+
+                            🔐
+
+                            <span>
+                                Local browser storage enabled
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE STATISTICS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR ACTIVITY
+                        </span>
+
+                        <h2>
+                            Complaint Overview
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="complaints.html"
+                        class="view-all-link"
+                    >
+                        View Complaints →
+                    </a>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+
+                    <!-- TOTAL -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon stat-blue">
+                            📋
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>
+                                Total Complaints
+                            </span>
+
+                            <strong id="totalComplaints">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PENDING -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon stat-orange">
+                            ⏳
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong id="pendingComplaints">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon stat-purple">
+                            🔄
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>
+                                In Progress
+                            </span>
+
+                            <strong id="progressComplaints">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESOLVED -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon stat-green">
+                            ✅
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>
+                                Resolved
+                            </span>
+
+                            <strong id="resolvedComplaints">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         PROFILE PAGE SCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadProfileData();
+
+                setupProfileForm();
+
+                if (
+                    typeof updateStatistics ===
+                    "function"
+                ) {
+
+                    updateStatistics();
+
+                }
+
+                if (
+                    typeof updateNotificationCount ===
+                    "function"
+                ) {
+
+                    updateNotificationCount();
+
+                }
+
+                if (
+                    typeof updateUserDisplay ===
+                    "function"
+                ) {
+
+                    updateUserDisplay();
+
+                }
+
+            }
+        );
+
+
+        /*
+         * Load profile information
+         */
+
+        function loadProfileData() {
+
+            let profile = null;
+
+
+            try {
+
+                if (
+                    typeof getProfile ===
+                    "function"
+                ) {
+
+                    profile =
+                        getProfile();
+
+                } else {
+
+                    profile =
+                        JSON.parse(
+                            localStorage.getItem(
+                                "cloudcomplain_profile"
+                            )
+                        );
+
+                }
+
+            } catch (error) {
+
+                profile = null;
+
+            }
+
+
+            if (!profile) {
+
+                profile = {
+
+                    name:
+                        "Dhilip Kumar",
+
+                    email:
+                        "dhilip@example.com",
+
+                    phone:
+                        "+91 98765 43210",
+
+                    department:
+                        "Computer Science",
+
+                    role:
+                        "Student"
+
+                };
+
+            }
+
+
+            setInputValue(
+                "profileName",
+                profile.name
+            );
+
+
+            setInputValue(
+                "profileEmail",
+                profile.email
+            );
+
+
+            setInputValue(
+                "profilePhone",
+                profile.phone
+            );
+
+
+            setInputValue(
+                "profileDepartment",
+                profile.department
+            );
+
+
+            setInputValue(
+                "profileRole",
+                profile.role
+            );
+
+
+            updateProfilePreview(
+                profile
+            );
+
+        }
+
+
+        /*
+         * Set input value safely
+         */
+
+        function setInputValue(
+            id,
+            value
+        ) {
+
+            const element =
+                document.getElementById(
+                    id
+                );
+
+
+            if (element) {
+
+                element.value =
+                    value || "";
+
+            }
+
+        }
+
+
+        /*
+         * Setup profile form
+         */
+
+        function setupProfileForm() {
+
+            const form =
+                document.getElementById(
+                    "profileForm"
+                );
+
+
+            if (!form) {
+
+                return;
+
+            }
+
+
+            form.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document.getElementById(
+                            "profileName"
+                        ).value.trim();
+
+
+                    const email =
+                        document.getElementById(
+                            "profileEmail"
+                        ).value.trim();
+
+
+                    const phone =
+                        document.getElementById(
+                            "profilePhone"
+                        ).value.trim();
+
+
+                    const department =
+                        document.getElementById(
+                            "profileDepartment"
+                        ).value.trim();
+
+
+                    const role =
+                        document.getElementById(
+                            "profileRole"
+                        ).value;
+
+
+                    if (!name) {
+
+                        showProfileToast(
+                            "Please enter your name.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    if (!email) {
+
+                        showProfileToast(
+                            "Please enter your email.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    if (
+                        !isValidEmail(email)
+                    ) {
+
+                        showProfileToast(
+                            "Please enter a valid email address.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    const profile = {
+
+                        name:
+                            name,
+
+                        email:
+                            email,
+
+                        phone:
+                            phone,
+
+                        department:
+                            department,
+
+                        role:
+                            role
+
+                    };
+
+
+                    if (
+                        typeof saveProfile ===
+                        "function"
+                    ) {
+
+                        saveProfile(
+                            profile
+                        );
+
+                    } else {
+
+                        localStorage.setItem(
+                            "cloudcomplain_profile",
+                            JSON.stringify(
+                                profile
+                            )
+                        );
+
+                    }
+
+
+                    updateProfilePreview(
+                        profile
+                    );
+
+
+                    if (
+                        typeof updateUserDisplay ===
+                        "function"
+                    ) {
+
+                        updateUserDisplay();
+
+                    }
+
+
+                    showProfileToast(
+                        "Profile updated successfully!",
+                        "success"
+                    );
+
+                }
+            );
+
+
+            const resetButton =
+                document.getElementById(
+                    "resetProfileButton"
+                );
+
+
+            if (resetButton) {
+
+                resetButton.addEventListener(
+                    "click",
+                    function () {
+
+                        loadProfileData();
+
+                        showProfileToast(
+                            "Profile changes were reset.",
+                            "info"
+                        );
+
+                    }
+                );
+
+            }
+
+        }
+
+
+        /*
+         * Update profile preview
+         */
+
+        function updateProfilePreview(
+            profile
+        ) {
+
+            const name =
+                profile.name ||
+                "User";
+
+
+            const displayName =
+                document.getElementById(
+                    "profileDisplayName"
+                );
+
+
+            if (displayName) {
+
+                displayName.textContent =
+                    name;
+
+            }
+
+
+            const avatar =
+                document.getElementById(
+                    "profileAvatar"
+                );
+
+
+            if (avatar) {
+
+                avatar.textContent =
+                    getInitials(name);
+
+            }
+
+
+            const topbarAvatar =
+                document.getElementById(
+                    "topbarAvatar"
+                );
+
+
+            if (topbarAvatar) {
+
+                topbarAvatar.textContent =
+                    getInitials(name);
+
+            }
+
+        }
+
+
+        /*
+         * Generate initials
+         */
+
+        function getInitials(
+            name
+        ) {
+
+            if (!name) {
+
+                return "U";
+
+            }
+
+
+            const parts =
+                name
+                    .trim()
+                    .split(/\s+/);
+
+
+            if (parts.length === 1) {
+
+                return parts[0]
+                    .charAt(0)
+                    .toUpperCase();
+
+            }
+
+
+            return (
+                parts[0].charAt(0) +
+                parts[
+                    parts.length - 1
+                ].charAt(0)
+            ).toUpperCase();
+
+        }
+
+
+        /*
+         * Validate email
+         */
+
+        function isValidEmail(
+            email
+        ) {
+
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                .test(email);
+
+        }
+
+
+        /*
+         * Show toast
+         *
+         * Uses main script.js toast if
+         * available.
+         */
+
+        function showProfileToast(
+            message,
+            type
+        ) {
+
+            if (
+                typeof showToast ===
+                "function"
+            ) {
+
+                showToast(
+                    message,
+                    type
+                );
+
+                return;
+
+            }
+
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            const toastMessage =
+                document.getElementById(
+                    "toastMessage"
+                );
+
+
+            if (
+                !toast ||
+                !toastMessage
+            ) {
+
+                return;
+
+            }
+
+
+            toastMessage.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                },
+                3000
+            );
+
+        }
+
+
+        /*
+         * Update statistics if script.js
+         * is available.
+         */
+
+        window.addEventListener(
+            "storage",
+            function (event) {
+
+                if (
+                    event.key ===
+                    "cloudcomplain_profile"
+                ) {
+
+                    loadProfileData();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - Complaint Categories"
+    >
+
+    <title>
+        Categories | CloudComplain
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            Complaint Categories
+                        </h2>
+
+                        <p>
+                            Choose the category that best matches your issue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- USER -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div class="user-avatar">
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        COMPLAINT CATEGORIES
+                    </span>
+
+                    <h1>
+                        Select a Category
+                    </h1>
+
+                    <p>
+                        Select a category to quickly start submitting
+                        your complaint.
+                    </p>
+
+                </div>
+
+
+                <div class="categories-header-icon">
+                    📂
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 CATEGORY GRID
+            ================================================== -->
+
+            <section class="categories-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            AVAILABLE CATEGORIES
+                        </span>
+
+                        <h2>
+                            What is your complaint about?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-grid">
+
+
+                    <!-- =========================================
+                         IT & TECHNOLOGY
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('IT & Technology')"
+                    >
+
+                        <div class="category-card-icon blue">
+                            💻
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                IT & Technology
+                            </h3>
+
+                            <p>
+                                Wi-Fi, computers, software,
+                                networks and technical issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         INFRASTRUCTURE
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Infrastructure')"
+                    >
+
+                        <div class="category-card-icon purple">
+                            🏢
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Infrastructure
+                            </h3>
+
+                            <p>
+                                Classrooms, buildings, electricity,
+                                water and maintenance issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         HOSTEL
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Hostel')"
+                    >
+
+                        <div class="category-card-icon orange">
+                            🛏️
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Hostel
+                            </h3>
+
+                            <p>
+                                Room, cleanliness, maintenance
+                                and hostel facility issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         TRANSPORT
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Transport')"
+                    >
+
+                        <div class="category-card-icon green">
+                            🚌
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Transport
+                            </h3>
+
+                            <p>
+                                Bus timings, routes, drivers
+                                and transportation facilities.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         ACADEMIC
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Academic')"
+                    >
+
+                        <div class="category-card-icon blue">
+                            🎓
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Academic
+                            </h3>
+
+                            <p>
+                                Classes, examinations, faculty,
+                                timetable and academic issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         LIBRARY
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Library')"
+                    >
+
+                        <div class="category-card-icon purple">
+                            📚
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Library
+                            </h3>
+
+                            <p>
+                                Books, library systems,
+                                seating and facility issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         FOOD & CANTEEN
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Food & Canteen')"
+                    >
+
+                        <div class="category-card-icon orange">
+                            🍽️
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Food & Canteen
+                            </h3>
+
+                            <p>
+                                Food quality, hygiene, service
+                                and canteen-related issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         ADMINISTRATION
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Administration')"
+                    >
+
+                        <div class="category-card-icon green">
+                            🏛️
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Administration
+                            </h3>
+
+                            <p>
+                                Office services, documents,
+                                fees and administrative issues.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- =========================================
+                         OTHER
+                    ========================================== -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        onclick="selectCategory('Other')"
+                    >
+
+                        <div class="category-card-icon gray">
+                            📌
+                        </div>
+
+                        <div class="category-card-content">
+
+                            <h3>
+                                Other
+                            </h3>
+
+                            <p>
+                                Any complaint that does not fit
+                                into the categories above.
+                            </p>
+
+                            <span class="category-action">
+                                Select Category →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK SUBMISSION BANNER
+            ================================================== -->
+
+            <section class="category-submit-banner">
+
+
+                <div class="category-submit-icon">
+                    📝
+                </div>
+
+
+                <div class="category-submit-content">
+
+                    <span class="section-label">
+                        READY TO REPORT?
+                    </span>
+
+                    <h2>
+                        Submit your complaint directly
+                    </h2>
+
+                    <p>
+                        You can also open the complaint form and
+                        select a category manually.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="submit.html"
+                    class="primary-button"
+                >
+
+                    ➕
+
+                    Submit Complaint
+
+                </a>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 CATEGORY INFORMATION
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            IMPORTANT
+                        </span>
+
+                        <h2>
+                            Choose the Right Category
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tips-grid">
+
+
+                    <div class="tip-card">
+
+                        <div class="tip-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Be Specific
+                            </h3>
+
+                            <p>
+                                Select the category that most closely
+                                describes your problem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-card">
+
+                        <div class="tip-icon">
+                            📝
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Give Details
+                            </h3>
+
+                            <p>
+                                Explain the issue clearly when filling
+                                out the complaint form.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-card">
+
+                        <div class="tip-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Add Location
+                            </h3>
+
+                            <p>
+                                Mention where the problem happened so
+                                it can be handled efficiently.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         CATEGORY PAGE SCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /*
+         * When a category is selected:
+         *
+         * 1. Save the category in localStorage.
+         * 2. Show a success message.
+         * 3. Open submit.html.
+         */
+
+        function selectCategory(category) {
+
+
+            if (!category) {
+
+                return;
+
+            }
+
+
+            localStorage.setItem(
+                "cloudcomplain_selected_category",
+                category
+            );
+
+
+            if (
+                typeof showToast ===
+                "function"
+            ) {
+
+                showToast(
+                    category +
+                    " selected.",
+                    "success"
+                );
+
+            }
+
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "submit.html";
+
+                },
+                500
+            );
+
+        }
+
+
+        /*
+         * Update notification count
+         */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                if (
+                    typeof updateNotificationCount ===
+                    "function"
+                ) {
+
+                    updateNotificationCount();
+
+                }
+
+
+                if (
+                    typeof updateUserDisplay ===
+                    "function"
+                ) {
+
+                    updateUserDisplay();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

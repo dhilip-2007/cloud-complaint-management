@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - Track Complaint"
+    >
+
+    <title>
+        Track Complaint | CloudComplain
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            Track Complaint
+                        </h2>
+
+                        <p>
+                            Check the latest status of your complaint.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- USER -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div class="user-avatar">
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        COMPLAINT TRACKING
+                    </span>
+
+                    <h1>
+                        Track Your Complaint
+                    </h1>
+
+                    <p>
+                        Enter your complaint ID to view its current status.
+                    </p>
+
+                </div>
+
+
+                <div class="tracking-header-icon">
+                    🔎
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH CARD
+            ================================================== -->
+
+            <section class="tracking-search-card">
+
+
+                <div class="tracking-search-icon">
+                    🔍
+                </div>
+
+
+                <div class="tracking-search-content">
+
+
+                    <h2>
+                        Enter Complaint ID
+                    </h2>
+
+
+                    <p>
+                        Your complaint ID was generated when you submitted
+                        the complaint.
+                    </p>
+
+
+                    <div class="tracking-input-row">
+
+
+                        <div class="tracking-input-wrapper">
+
+                            <span>
+                                #
+                            </span>
+
+                            <input
+                                type="text"
+                                id="complaintId"
+                                placeholder="Example: CMP-2026-123456"
+                                autocomplete="off"
+                                aria-label="Complaint ID"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-button"
+                            id="trackButton"
+                            onclick="trackComplaint()"
+                        >
+
+                            🔍
+
+                            Track Complaint
+
+                        </button>
+
+
+                    </div>
+
+
+                    <small class="tracking-input-help">
+                        Enter the complete complaint ID.
+                    </small>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 TRACKING RESULT
+            ================================================== -->
+
+            <section
+                id="trackingResult"
+                class="tracking-result"
+            >
+
+                <!-- Result will appear here -->
+
+            </section>
+
+
+            <!-- =================================================
+                 HOW TRACKING WORKS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            TRACKING PROCESS
+                        </span>
+
+                        <h2>
+                            How Complaint Tracking Works
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tracking-steps-grid">
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="tracking-step-card">
+
+                        <div class="tracking-step-icon blue">
+                            🆔
+                        </div>
+
+                        <div class="tracking-step-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Enter ID
+                        </h3>
+
+                        <p>
+                            Enter the unique complaint ID given after
+                            submitting your complaint.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="tracking-step-card">
+
+                        <div class="tracking-step-icon purple">
+                            🔍
+                        </div>
+
+                        <div class="tracking-step-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Search
+                        </h3>
+
+                        <p>
+                            Click the Track Complaint button to find
+                            your complaint.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="tracking-step-card">
+
+                        <div class="tracking-step-icon orange">
+                            📊
+                        </div>
+
+                        <div class="tracking-step-number">
+                            03
+                        </div>
+
+                        <h3>
+                            View Status
+                        </h3>
+
+                        <p>
+                            View the current status and complaint details.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STEP 4 -->
+
+                    <div class="tracking-step-card">
+
+                        <div class="tracking-step-icon green">
+                            ✅
+                        </div>
+
+                        <div class="tracking-step-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Get Resolution
+                        </h3>
+
+                        <p>
+                            Check again later to see when your complaint
+                            has been resolved.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 HELPFUL INFORMATION
+            ================================================== -->
+
+            <section class="info-banner">
+
+
+                <div class="info-banner-icon">
+                    💡
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Don't know your complaint ID?
+                    </h3>
+
+                    <p>
+                        Open My Complaints to see all your submitted
+                        complaints and their unique IDs.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="complaints.html"
+                    class="secondary-button"
+                >
+
+                    📋
+
+                    My Complaints
+
+                </a>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         TRACKING PAGE JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =================================================
+           TRACK COMPLAINT
+        ================================================== */
+
+        function trackComplaint() {
+
+
+            const input =
+                document.getElementById(
+                    "complaintId"
+                );
+
+
+            const result =
+                document.getElementById(
+                    "trackingResult"
+                );
+
+
+            if (!input || !result) {
+                return;
+            }
+
+
+            const complaintId =
+                input.value
+                    .trim()
+                    .toUpperCase();
+
+
+            /* =============================================
+               EMPTY ID
+            ============================================== */
+
+            if (!complaintId) {
+
+
+                result.innerHTML = `
+
+                    <div class="tracking-error">
+
+                        <div class="tracking-error-icon">
+                            ⚠️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Complaint ID Required
+                            </h3>
+
+                            <p>
+                                Please enter your complaint ID
+                                before tracking.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                input.focus();
+
+
+                if (
+                    typeof showToast ===
+                    "function"
+                ) {
+
+                    showToast(
+                        "Please enter a complaint ID.",
+                        "error"
+                    );
+
+                }
+
+
+                return;
+
+            }
+
+
+            /* =============================================
+               FIND COMPLAINT
+            ============================================== */
+
+            let complaint = null;
+
+
+            if (
+                typeof findComplaint ===
+                "function"
+            ) {
+
+                complaint =
+                    findComplaint(
+                        complaintId
+                    );
+
+            } else {
+
+
+                const complaints =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "cloudcomplain_complaints"
+                        ) || "[]"
+                    );
+
+
+                complaint =
+                    complaints.find(
+                        function (item) {
+
+                            return String(
+                                item.id
+                            ).toUpperCase() ===
+                            complaintId;
+
+                        }
+                    );
+
+            }
+
+
+            /* =============================================
+               NOT FOUND
+            ============================================== */
+
+            if (!complaint) {
+
+
+                result.innerHTML = `
+
+                    <div class="tracking-error">
+
+                        <div class="tracking-error-icon">
+                            ❌
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Complaint Not Found
+                            </h3>
+
+                            <p>
+                                We could not find a complaint
+                                with ID
+                                <strong>
+                                    ${escapeHTML(complaintId)}
+                                </strong>.
+                                Please check the ID and try again.
+                            </p>
+
+                            <a
+                                href="complaints.html"
+                                class="secondary-button"
+                            >
+                                📋 View My Complaints
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                if (
+                    typeof showToast ===
+                    "function"
+                ) {
+
+                    showToast(
+                        "Complaint not found.",
+                        "error"
+                    );
+
+                }
+
+
+                return;
+
+            }
+
+
+            /* =============================================
+               COMPLAINT STATUS
+            ============================================== */
+
+            const status =
+                complaint.status ||
+                "Pending";
+
+
+            const statusClass =
+                getStatusClass(
+                    status
+                );
+
+
+            /* =============================================
+               DATE
+            ============================================== */
+
+            let dateText =
+                "Not available";
+
+
+            if (complaint.createdAt) {
+
+                const date =
+                    new Date(
+                        complaint.createdAt
+                    );
+
+
+                if (
+                    !isNaN(
+                        date.getTime()
+                    )
+                ) {
+
+                    dateText =
+                        date.toLocaleDateString(
+                            "en-IN",
+                            {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric"
+                            }
+                        );
+
+                }
+
+            }
+
+
+            /* =============================================
+               PROGRESS
+            ============================================== */
+
+            let progress =
+                25;
+
+
+            if (
+                status ===
+                "In Progress"
+            ) {
+
+                progress = 60;
+
+            }
+
+
+            if (
+                status ===
+                "Resolved"
+            ) {
+
+                progress = 100;
+
+            }
+
+
+            if (
+                status ===
+                "Rejected"
+            ) {
+
+                progress = 100;
+
+            }
+
+
+            /* =============================================
+               RESULT HTML
+            ============================================== */
+
+            result.innerHTML = `
+
+                <div class="tracking-result-card">
+
+
+                    <!-- RESULT HEADER -->
+
+                    <div class="tracking-result-header">
+
+
+                        <div>
+
+                            <span class="section-label">
+                                COMPLAINT FOUND
+                            </span>
+
+                            <h2>
+                                ${escapeHTML(
+                                    complaint.title ||
+                                    "Complaint"
+                                )}
+                            </h2>
+
+                            <p>
+                                Complaint ID:
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.id
+                                    )}
+                                </strong>
+                            </p>
+
+                        </div>
+
+
+                        <span
+                            class="status-badge ${statusClass}"
+                        >
+                            ${escapeHTML(status)}
+                        </span>
+
+
+                    </div>
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="tracking-progress-section">
+
+
+                        <div class="tracking-progress-heading">
+
+                            <h3>
+                                Complaint Progress
+                            </h3>
+
+                            <strong>
+                                ${progress}%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill"
+                                style="width: ${progress}%"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="progress-labels">
+
+                            <span>
+                                Submitted
+                            </span>
+
+                            <span>
+                                Under Review
+                            </span>
+
+                            <span>
+                                In Progress
+                            </span>
+
+                            <span>
+                                Resolved
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DETAILS -->
+
+                    <div class="tracking-details-grid">
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                🆔
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Complaint ID
+                                </small>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.id
+                                    )}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                📅
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Submitted On
+                                </small>
+
+                                <strong>
+                                    ${dateText}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                📁
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Category
+                                </small>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.category ||
+                                        "Other"
+                                    )}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                🚨
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Priority
+                                </small>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.priority ||
+                                        "Medium"
+                                    )}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                📍
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Location
+                                </small>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.location ||
+                                        "Not specified"
+                                    )}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracking-detail">
+
+                            <span class="detail-icon">
+                                👤
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Submitted By
+                                </small>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        complaint.userName ||
+                                        "Dhilip Kumar"
+                                    )}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="tracking-description">
+
+
+                        <h3>
+                            Complaint Description
+                        </h3>
+
+
+                        <p>
+                            ${escapeHTML(
+                                complaint.description ||
+                                "No description available."
+                            )}
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- ACTIONS -->
+
+                    <div class="tracking-actions">
+
+
+                        <a
+                            href="complaints.html"
+                            class="secondary-button"
+                        >
+
+                            📋
+
+                            My Complaints
+
+                        </a>
+
+
+                        <a
+                            href="submit.html"
+                            class="primary-button"
+                        >
+
+                            ➕
+
+                            New Complaint
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+
+            if (
+                typeof showToast ===
+                "function"
+            ) {
+
+                showToast(
+                    "Complaint found successfully.",
+                    "success"
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           ENTER KEY
+        ================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const input =
+                    document.getElementById(
+                        "complaintId"
+                    );
+
+
+                if (input) {
+
+                    input.addEventListener(
+                        "keydown",
+                        function (event) {
+
+                            if (
+                                event.key ===
+                                "Enter"
+                            ) {
+
+                                event.preventDefault();
+
+                                trackComplaint();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                /* =============================================
+                   URL PARAMETER
+                ============================================== */
+
+                const params =
+                    new URLSearchParams(
+                        window.location.search
+                    );
+
+
+                const id =
+                    params.get("id");
+
+
+                if (
+                    id &&
+                    input
+                ) {
+
+                    input.value =
+                        id;
+
+
+                    setTimeout(
+                        function () {
+
+                            trackComplaint();
+
+                        },
+                        200
+                    );
+
+                }
+
+
+                if (
+                    typeof updateNotificationCount ===
+                    "function"
+                ) {
+
+                    updateNotificationCount();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

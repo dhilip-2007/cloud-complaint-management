@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - My Complaints"
+    >
+
+    <title>
+        My Complaints | CloudComplain
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            My Complaints
+                        </h2>
+
+                        <p>
+                            View and manage all your complaints.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- Notification -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- User -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div class="user-avatar">
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        COMPLAINT MANAGEMENT
+                    </span>
+
+                    <h1>
+                        My Complaints
+                    </h1>
+
+                    <p>
+                        View, search and track all your submitted complaints.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="submit.html"
+                    class="primary-button"
+                >
+
+                    <span>
+                        ➕
+                    </span>
+
+                    Submit Complaint
+
+                </a>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- TOTAL -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📋
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Complaints
+                        </span>
+
+                        <strong id="totalComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PENDING -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ⏳
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="pendingComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IN PROGRESS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        🔄
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            In Progress
+                        </span>
+
+                        <strong id="progressComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESOLVED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Resolved
+                        </span>
+
+                        <strong id="resolvedComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH AND FILTERS
+            ================================================== -->
+
+            <section class="filter-section">
+
+
+                <div class="filter-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            FIND COMPLAINT
+                        </span>
+
+                        <h2>
+                            Search & Filter
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="form-group search-group">
+
+                        <label
+                            for="searchInput"
+                        >
+                            Search Complaint
+                        </label>
+
+
+                        <div class="input-with-icon">
+
+                            <span>
+                                🔍
+                            </span>
+
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search by ID, title, category..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="statusFilter"
+                        >
+                            Status
+                        </label>
+
+
+                        <select
+                            id="statusFilter"
+                        >
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                            <option value="In Progress">
+                                In Progress
+                            </option>
+
+                            <option value="Resolved">
+                                Resolved
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="categoryFilter"
+                        >
+                            Category
+                        </label>
+
+
+                        <select
+                            id="categoryFilter"
+                        >
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="IT & Technology">
+                                IT & Technology
+                            </option>
+
+                            <option value="Infrastructure">
+                                Infrastructure
+                            </option>
+
+                            <option value="Hostel">
+                                Hostel
+                            </option>
+
+                            <option value="Transport">
+                                Transport
+                            </option>
+
+                            <option value="Academic">
+                                Academic
+                            </option>
+
+                            <option value="Library">
+                                Library
+                            </option>
+
+                            <option value="Food & Canteen">
+                                Food & Canteen
+                            </option>
+
+                            <option value="Administration">
+                                Administration
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- RESET -->
+
+                    <div class="filter-button-wrapper">
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            id="resetFilterButton"
+                            onclick="resetFilters()"
+                        >
+
+                            🔄 Reset
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 COMPLAINT LIST HEADER
+            ================================================== -->
+
+            <section class="list-section">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR RECORDS
+                        </span>
+
+                        <h2>
+                            Submitted Complaints
+                        </h2>
+
+                    </div>
+
+
+                    <div class="complaint-count-box">
+
+                        <span>
+                            Showing
+                        </span>
+
+                        <strong
+                            id="complaintCount"
+                        >
+                            0
+                        </strong>
+
+                        <span>
+                            complaints
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================================
+                     COMPLAINT LIST
+                ================================================== -->
+
+                <div
+                    id="complaintsList"
+                    class="complaints-list"
+                >
+
+
+                    <div class="empty-state">
+
+
+                        <div class="empty-icon">
+                            📋
+                        </div>
+
+
+                        <h3>
+                            No Complaints Yet
+                        </h3>
+
+
+                        <p>
+                            You have not submitted any complaints.
+                        </p>
+
+
+                        <a
+                            href="submit.html"
+                            class="primary-button"
+                        >
+
+                            ➕ Submit Complaint
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 INFORMATION BOX
+            ================================================== -->
+
+            <section class="info-banner">
+
+
+                <div class="info-banner-icon">
+                    💡
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Need to check a complaint?
+                    </h3>
+
+                    <p>
+                        Every complaint receives a unique complaint ID.
+                        You can use that ID on the Track Complaint page
+                        to quickly check its current status.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="track.html"
+                    class="secondary-button"
+                >
+
+                    🔍 Track Now
+
+                </a>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         PAGE-SPECIFIC JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =================================================
+           FILTER VARIABLES
+        ================================================== */
+
+        let currentSearch = "";
+
+        let currentStatus = "all";
+
+        let currentCategory = "all";
+
+
+        /* =================================================
+           APPLY FILTERS
+        ================================================== */
+
+        function applyFilters() {
+
+            const complaints =
+                getComplaints();
+
+
+            currentSearch =
+                document
+                    .getElementById(
+                        "searchInput"
+                    )
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+
+            currentStatus =
+                document
+                    .getElementById(
+                        "statusFilter"
+                    )
+                    .value;
+
+
+            currentCategory =
+                document
+                    .getElementById(
+                        "categoryFilter"
+                    )
+                    .value;
+
+
+            const filtered =
+                complaints.filter(
+                    function (complaint) {
+
+
+                        /* SEARCH */
+
+                        const searchMatch =
+
+                            !currentSearch ||
+
+                            String(
+                                complaint.id || ""
+                            )
+                                .toLowerCase()
+                                .includes(
+                                    currentSearch
+                                )
+
+                            ||
+
+                            String(
+                                complaint.title || ""
+                            )
+                                .toLowerCase()
+                                .includes(
+                                    currentSearch
+                                )
+
+                            ||
+
+                            String(
+                                complaint.category || ""
+                            )
+                                .toLowerCase()
+                                .includes(
+                                    currentSearch
+                                )
+
+                            ||
+
+                            String(
+                                complaint.description || ""
+                            )
+                                .toLowerCase()
+                                .includes(
+                                    currentSearch
+                                )
+
+                            ||
+
+                            String(
+                                complaint.location || ""
+                            )
+                                .toLowerCase()
+                                .includes(
+                                    currentSearch
+                                );
+
+
+                        /* STATUS */
+
+                        const statusMatch =
+
+                            currentStatus === "all"
+
+                            ||
+
+                            String(
+                                complaint.status ||
+                                ""
+                            ).toLowerCase() ===
+
+                            currentStatus.toLowerCase();
+
+
+                        /* CATEGORY */
+
+                        const categoryMatch =
+
+                            currentCategory === "all"
+
+                            ||
+
+                            String(
+                                complaint.category ||
+                                ""
+                            ).toLowerCase() ===
+
+                            currentCategory.toLowerCase();
+
+
+                        return (
+                            searchMatch &&
+                            statusMatch &&
+                            categoryMatch
+                        );
+
+                    }
+                );
+
+
+            displayComplaints(
+                filtered
+            );
+
+
+            updateComplaintCount(
+                filtered.length
+            );
+
+        }
+
+
+        /* =================================================
+           RESET FILTERS
+        ================================================== */
+
+        function resetFilters() {
+
+            document.getElementById(
+                "searchInput"
+            ).value = "";
+
+
+            document.getElementById(
+                "statusFilter"
+            ).value = "all";
+
+
+            document.getElementById(
+                "categoryFilter"
+            ).value = "all";
+
+
+            currentSearch = "";
+
+            currentStatus = "all";
+
+            currentCategory = "all";
+
+
+            const complaints =
+                getComplaints();
+
+
+            displayComplaints(
+                complaints
+            );
+
+
+            updateComplaintCount(
+                complaints.length
+            );
+
+
+            showToast(
+                "Filters reset.",
+                "info"
+            );
+
+        }
+
+
+        /* =================================================
+           UPDATE COMPLAINT COUNT
+        ================================================== */
+
+        function updateComplaintCount(
+            count = null
+        ) {
+
+            const element =
+                document.getElementById(
+                    "complaintCount"
+                );
+
+
+            if (!element) {
+                return;
+            }
+
+
+            if (count === null) {
+
+                count =
+                    getComplaints()
+                        .length;
+
+            }
+
+
+            element.textContent =
+                count;
+
+        }
+
+
+        /* =================================================
+           PAGE INITIALIZATION
+        ================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const searchInput =
+                    document.getElementById(
+                        "searchInput"
+                    );
+
+
+                const statusFilter =
+                    document.getElementById(
+                        "statusFilter"
+                    );
+
+
+                const categoryFilter =
+                    document.getElementById(
+                        "categoryFilter"
+                    );
+
+
+                if (searchInput) {
+
+                    searchInput.addEventListener(
+                        "input",
+                        applyFilters
+                    );
+
+                }
+
+
+                if (statusFilter) {
+
+                    statusFilter.addEventListener(
+                        "change",
+                        applyFilters
+                    );
+
+                }
+
+
+                if (categoryFilter) {
+
+                    categoryFilter.addEventListener(
+                        "change",
+                        applyFilters
+                    );
+
+                }
+
+
+                const complaints =
+                    getComplaints();
+
+
+                displayComplaints(
+                    complaints
+                );
+
+
+                updateComplaintCount(
+                    complaints.length
+                );
+
+
+                updateStatistics();
+
+
+                updateNotificationCount();
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

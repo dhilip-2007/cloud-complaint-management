@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CloudComplain - Cloud Based Complaint Management System"
+    >
+
+    <title>
+        CloudComplain | Complaint Management
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ☁️
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>
+                        CloudComplain
+                    </h1>
+
+                    <p>
+                        Complaint Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="index.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        My Complaints
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="submit.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ➕
+                    </span>
+
+                    <span>
+                        Submit Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="categories.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="notification.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        🔔
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span
+                        id="headerNotificationCount"
+                        class="notification-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <div class="help-box">
+
+                    <div class="help-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            We are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- Top Bar -->
+
+            <header class="topbar">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-left">
+
+                    <div>
+
+                        <h2>
+                            Dashboard
+                        </h2>
+
+                        <p>
+                            Welcome back! Manage your complaints easily.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- Notification -->
+
+                    <a
+                        href="notification.html"
+                        class="topbar-icon-button"
+                        title="Notifications"
+                    >
+
+                        🔔
+
+                        <span
+                            id="notificationCount"
+                            class="notification-count"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- User -->
+
+                    <a
+                        href="profile.html"
+                        class="user-mini"
+                    >
+
+                        <div class="user-avatar">
+                            D
+                        </div>
+
+                        <div class="user-mini-info">
+
+                            <strong id="headerUserName">
+                                Dhilip Kumar
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 WELCOME SECTION
+            ================================================== -->
+
+            <section class="welcome-section">
+
+
+                <div class="welcome-content">
+
+                    <span class="section-label">
+                        CLOUD COMPLAINT PORTAL
+                    </span>
+
+                    <h1>
+                        Welcome to
+                        <span>
+                            CloudComplain
+                        </span>
+                    </h1>
+
+                    <p>
+                        Submit, manage and track your complaints
+                        from one simple cloud-based platform.
+                    </p>
+
+
+                    <div class="welcome-buttons">
+
+                        <a
+                            href="submit.html"
+                            class="primary-button"
+                        >
+
+                            <span>
+                                ➕
+                            </span>
+
+                            Submit New Complaint
+
+                        </a>
+
+
+                        <a
+                            href="track.html"
+                            class="secondary-button"
+                        >
+
+                            <span>
+                                🔍
+                            </span>
+
+                            Track Complaint
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="welcome-illustration">
+
+                    <div class="cloud-illustration">
+
+                        ☁️
+
+                    </div>
+
+                    <div class="illustration-card">
+
+                        <span>
+                            📋
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Easy Complaint Management
+                            </strong>
+
+                            <small>
+                                Submit • Track • Resolve
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- Total -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📋
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Complaints
+                        </span>
+
+                        <strong id="totalComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ⏳
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="pendingComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        🔄
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            In Progress
+                        </span>
+
+                        <strong id="progressComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolved -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Resolved
+                        </span>
+
+                        <strong id="resolvedComplaints">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            QUICK ACTIONS
+                        </span>
+
+                        <h2>
+                            What would you like to do?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions-grid">
+
+
+                    <!-- Submit -->
+
+                    <a
+                        href="submit.html"
+                        class="action-card"
+                    >
+
+                        <div class="action-icon blue">
+                            ➕
+                        </div>
+
+                        <div class="action-card-content">
+
+                            <h3>
+                                Submit Complaint
+                            </h3>
+
+                            <p>
+                                Report a new issue or problem.
+                            </p>
+
+                            <span class="action-link">
+                                Get Started →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Complaints -->
+
+                    <a
+                        href="complaints.html"
+                        class="action-card"
+                    >
+
+                        <div class="action-icon purple">
+                            📋
+                        </div>
+
+                        <div class="action-card-content">
+
+                            <h3>
+                                My Complaints
+                            </h3>
+
+                            <p>
+                                View all your submitted complaints.
+                            </p>
+
+                            <span class="action-link">
+                                View Complaints →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Track -->
+
+                    <a
+                        href="track.html"
+                        class="action-card"
+                    >
+
+                        <div class="action-icon green">
+                            🔍
+                        </div>
+
+                        <div class="action-card-content">
+
+                            <h3>
+                                Track Complaint
+                            </h3>
+
+                            <p>
+                                Check the current complaint status.
+                            </p>
+
+                            <span class="action-link">
+                                Track Now →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 HOW IT WORKS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            SIMPLE PROCESS
+                        </span>
+
+                        <h2>
+                            How CloudComplain Works
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+
+                    <!-- Step 1 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Submit
+                        </h3>
+
+                        <p>
+                            Describe your problem and submit
+                            your complaint online.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Step 2 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            Track
+                        </h3>
+
+                        <p>
+                            Use your complaint ID to check
+                            the latest status.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Step 3 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Process
+                        </h3>
+
+                        <p>
+                            Your complaint is reviewed and
+                            processed.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Step 4 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div class="step-icon">
+                            ✅
+                        </div>
+
+                        <h3>
+                            Resolve
+                        </h3>
+
+                        <p>
+                            Get a resolution and notification
+                            when the issue is completed.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RECENT COMPLAINTS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACTIVITY
+                        </span>
+
+                        <h2>
+                            Recent Complaints
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="complaints.html"
+                        class="view-all-link"
+                    >
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="recentComplaints"
+                    class="recent-complaints"
+                >
+
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            No Complaints Yet
+                        </h3>
+
+                        <p>
+                            Your recent complaints will appear here.
+                        </p>
+
+                        <a
+                            href="submit.html"
+                            class="primary-button"
+                        >
+                            ➕ Submit Your First Complaint
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        CloudComplain
+                    </strong>
+
+                    <span>
+                        — Cloud-Based Complaint Management System
+                    </span>
+
+                </div>
+
+                <p>
+                    © 2026 CloudComplain. All rights reserved.
+                </p>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST MESSAGE
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <span
+            id="toastMessage"
+        >
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

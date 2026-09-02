@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint | CloudComplain</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">☁</div>
+
+            <div class="logo-text">
+                <strong>Cloud</strong><span>Complain</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="complaints.html" class="nav-link">
+                <span class="nav-icon">▣</span>
+                <span>My Complaints</span>
+            </a>
+
+            <a href="submit.html" class="nav-link active">
+                <span class="nav-icon">＋</span>
+                <span>Submit Complaint</span>
+            </a>
+
+            <a href="track.html" class="nav-link">
+                <span class="nav-icon">⌕</span>
+                <span>Track Complaint</span>
+            </a>
+
+            <a href="categories.html" class="nav-link">
+                <span class="nav-icon">▦</span>
+                <span>Categories</span>
+            </a>
+
+            <a href="notification.html" class="nav-link">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+                <span class="notification-count" id="notificationCount">0</span>
+            </a>
+
+            <a href="profile.html" class="nav-link">
+                <span class="nav-icon">◉</span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need Help?</strong>
+                    <p>We're here to help you.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-button" id="menuButton">
+                    ☰
+                </button>
+
+                <div>
+                    <h2>Submit Complaint</h2>
+                    <p>Create and submit a new complaint</p>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <a href="notification.html" class="topbar-icon-button">
+                    ♢
+                    <span class="notification-count" id="headerNotificationCount">0</span>
+                </a>
+
+                <a href="profile.html" class="user-mini">
+
+                    <div class="user-avatar">
+                        DK
+                    </div>
+
+                    <div class="user-mini-info">
+                        <strong id="headerUserName">Dhilip Kumar</strong>
+                        <span>Student</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE HEADER ================= -->
+        <section class="page-header">
+
+            <div>
+                <span class="section-label">COMPLAINT CENTER</span>
+
+                <h1>Submit a Complaint</h1>
+
+                <p>
+                    Tell us about the issue you're facing and we'll make sure
+                    it reaches the right department.
+                </p>
+            </div>
+
+            <div class="secure-badge">
+                🔒 Secure & Confidential
+            </div>
+
+        </section>
+
+
+        <!-- ================= FORM LAYOUT ================= -->
+        <section class="form-layout">
+
+            <!-- ================= FORM CARD ================= -->
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div class="form-header-icon">
+                        📝
+                    </div>
+
+                    <div>
+                        <h2>Complaint Details</h2>
+
+                        <p>
+                            Please provide accurate information about your complaint.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ================= FORM ================= -->
+                <form id="complaintForm" novalidate>
+
+                    <!-- TITLE -->
+                    <div class="form-group">
+
+                        <label for="title">
+                            Complaint Title
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Example: Wi-Fi not working in Block A"
+                            maxlength="100"
+                            required
+                        >
+
+                        <small class="form-help">
+                            Give your complaint a short and clear title.
+                        </small>
+
+                    </div>
+
+
+                    <!-- CATEGORY + PRIORITY -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="category">
+                                Category
+                                <span class="required">*</span>
+                            </label>
+
+                            <select
+                                id="category"
+                                name="category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a category
+                                </option>
+
+                                <option value="IT & Technology">
+                                    IT & Technology
+                                </option>
+
+                                <option value="Infrastructure">
+                                    Infrastructure
+                                </option>
+
+                                <option value="Hostel">
+                                    Hostel
+                                </option>
+
+                                <option value="Transport">
+                                    Transport
+                                </option>
+
+                                <option value="Academic">
+                                    Academic
+                                </option>
+
+                                <option value="Library">
+                                    Library
+                                </option>
+
+                                <option value="Food & Canteen">
+                                    Food & Canteen
+                                </option>
+
+                                <option value="Administration">
+                                    Administration
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="priority">
+                                Priority
+                                <span class="required">*</span>
+                            </label>
+
+                            <select
+                                id="priority"
+                                name="priority"
+                                required
+                            >
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium" selected>
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                                <option value="Urgent">
+                                    Urgent
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Example: Main Block, Room 204"
+                            maxlength="150"
+                            required
+                        >
+
+                        <small class="form-help">
+                            Mention where the issue occurred.
+                        </small>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group">
+
+                        <div class="label-with-counter">
+
+                            <label for="description">
+                                Complaint Description
+                                <span class="required">*</span>
+                            </label>
+
+                            <span
+                                class="character-count"
+                                id="characterCount"
+                            >
+                                0 / 1000
+                            </span>
+
+                        </div>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="8"
+                            maxlength="1000"
+                            placeholder="Describe your complaint in detail..."
+                            required
+                        ></textarea>
+
+                        <small class="form-help">
+                            Provide enough details so the responsible department
+                            can understand and resolve the issue.
+                        </small>
+
+                    </div>
+
+
+                    <!-- DECLARATION -->
+                    <div class="declaration-box">
+
+                        <div class="declaration-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>Before submitting</strong>
+
+                            <p>
+                                Please make sure the information provided is
+                                accurate. False or misleading complaints may
+                                be rejected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM ACTIONS -->
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            id="clearFormButton"
+                        >
+                            Clear Form
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                            id="submitComplaint"
+                        >
+                            <span>✓</span>
+                            Submit Complaint
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- ================= SIDE INFORMATION ================= -->
+            <aside class="form-info">
+
+                <!-- HOW IT WORKS -->
+                <div class="side-info-card">
+
+                    <div class="side-info-icon">
+                        🚀
+                    </div>
+
+                    <h3>How It Works</h3>
+
+                    <p>
+                        Your complaint goes through a simple process.
+                    </p>
+
+
+                    <div class="info-steps">
+
+                        <div class="info-step">
+
+                            <div class="step-number">
+                                1
+                            </div>
+
+                            <div>
+                                <strong>Submit</strong>
+                                <span>
+                                    Provide the complaint details.
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-step">
+
+                            <div class="step-number">
+                                2
+                            </div>
+
+                            <div>
+                                <strong>Review</strong>
+                                <span>
+                                    The responsible department reviews it.
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-step">
+
+                            <div class="step-number">
+                                3
+                            </div>
+
+                            <div>
+                                <strong>Process</strong>
+                                <span>
+                                    The issue is investigated and processed.
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-step">
+
+                            <div class="step-number">
+                                4
+                            </div>
+
+                            <div>
+                                <strong>Resolve</strong>
+                                <span>
+                                    You receive the final resolution.
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPS -->
+                <div class="side-info-card">
+
+                    <div class="side-info-icon">
+                        💡
+                    </div>
+
+                    <h3>Tips for a Good Complaint</h3>
+
+                    <ul class="tips-list">
+
+                        <li>
+                            Use a clear and specific title.
+                        </li>
+
+                        <li>
+                            Select the correct category.
+                        </li>
+
+                        <li>
+                            Mention the exact location.
+                        </li>
+
+                        <li>
+                            Explain the issue clearly.
+                        </li>
+
+                        <li>
+                            Avoid unnecessary information.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- TRACKING HELP -->
+                <div class="tracking-help-card">
+
+                    <div class="tracking-header-icon">
+                        🔎
+                    </div>
+
+                    <div>
+
+                        <h3>Track Your Complaint</h3>
+
+                        <p>
+                            After submission, you'll receive a unique
+                            complaint ID.
+                        </p>
+
+                        <a
+                            href="track.html"
+                            class="action-link"
+                        >
+                            Track Complaint →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+
+            <p>
+                © 2026 CloudComplain. Cloud-Based Complaint Management System.
+            </p>
+
+            <div>
+                <span>Secure</span>
+                <span>•</span>
+                <span>Reliable</span>
+                <span>•</span>
+                <span>Cloud Powered</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast">
+
+    <div class="toast-icon">
+        ✓
+    </div>
+
+    <div>
+        <strong id="toastTitle">Success</strong>
+        <p id="toastMessage"></p>
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("complaintForm");
+
+    const description =
+        document.getElementById("description");
+
+    const characterCount =
+        document.getElementById("characterCount");
+
+    const clearButton =
+        document.getElementById("clearFormButton");
+
+
+    /* ================= CHARACTER COUNT ================= */
+
+    if (description && characterCount) {
+
+        function updateCharacterCount() {
+
+            const length = description.value.length;
+
+            characterCount.textContent =
+                length + " / 1000";
+
+        }
+
+        description.addEventListener(
+            "input",
+            updateCharacterCount
+        );
+
+        updateCharacterCount();
+    }
+
+
+    /* ================= CLEAR FORM ================= */
+
+    if (clearButton && form) {
+
+        clearButton.addEventListener(
+            "click",
+            function () {
+
+                const confirmClear =
+                    confirm(
+                        "Are you sure you want to clear the form?"
+                    );
+
+                if (confirmClear) {
+
+                    form.reset();
+
+                    if (characterCount) {
+
+                        characterCount.textContent =
+                            "0 / 1000";
+
+                    }
+
+                    if (typeof clearSelectedCategory === "function") {
+
+                        clearSelectedCategory();
+
+                    }
+
+                    if (typeof showToast === "function") {
+
+                        showToast(
+                            "Form cleared successfully.",
+                            "info"
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* ================= CATEGORY FROM CATEGORIES PAGE ================= */
+
+    try {
+
+        const selectedCategory =
+            localStorage.getItem(
+                "cloudcomplain_selected_category"
+            );
+
+        const category =
+            document.getElementById("category");
+
+        if (
+            selectedCategory &&
+            category
+        ) {
+
+            category.value =
+                selectedCategory;
+
+        }
+
+    } catch (error) {
+
+        console.log(
+            "Category loading error:",
+            error
+        );
+
+    }
+
+
+    /* ================= NOTIFICATION COUNT ================= */
+
+    if (
+        typeof updateNotificationCount ===
+        "function"
+    ) {
+
+        updateNotificationCount();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
